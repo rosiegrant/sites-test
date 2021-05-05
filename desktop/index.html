@@ -1,7 +1,98 @@
-<html>
-    <h1>Sites Test Demo</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- JS Links -->
+    <script src="https://assets.sitescdn.net/answers/v1/answerstemplates.compiled.min.js"></script>
+    <script src="https://assets.sitescdn.net/answers/v1/answers.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://assets.sitescdn.net/answers/v1/answers.css"
+    />
+
+    <!-- layout styling -->
+    <style>
+      .answers-layout {
+        max-width: 50rem;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="answers-layout">
+      <div class="searchbar-container"></div>
+      <div class="navigation-container"></div>
+      <div class="spellcheck-container"></div>
+      <div class="universal-container"></div>
+      <div class="directanswer-container"></div>
+      <div class="locationbias-container"></div>
+    </div>
+
+    <script>
+      ANSWERS.init({
+        apiKey: "df4b24f4075800e5e9705090c54c6c13",
+        experienceKey: "rosetest",
+        sessionTrackingEnabled: true,
+        businessId: "2287528",
+        experienceVersion: "PRODUCTION",
+        templateBundle: TemplateBundle.default,
+        search: {
+          defaultInitialSearch: "virginia"
+        },
+        verticalPages: [
+          {
+            label: "All",
+            url: "/index.html",
+            isFirst: true,
+            isActive: true
+          },
+          {
+            verticalKey: "KM",
+            label: "Locations",
+            url: "/locations.html"
+          },
+          {
+            verticalKey: "people",
+            label: "People",
+            url: "/people.html"
+          },
+          {
+            verticalKey: "faqs",
+            label: "FAQs",
+            url: "/faqs.html"
+          }
+        ],
+
+        onReady: function () {
+          // init components
+          this.addComponent("SearchBar", {
+            container: ".searchbar-container",
+            allowEmptySearch: true
+          });
+          this.addComponent("Navigation", {
+            container: ".navigation-container"
+          });
+          this.addComponent("SpellCheck", {
+            container: ".spellcheck-container"
+          });
+          this.addComponent("DirectAnswer", {
+            container: ".directanswer-container"
+          });
+          this.addComponent("UniversalResults", {
+            container: ".universal-container"
+          });
+          this.addComponent("LocationBias", {
+            container: ".locationbias-container"
+          });
+        }
+      });
+    </script>
+  </body>
+
     
-    <p>Here is some text for you to update!!!!</p>
     
-    
+
+
 </html>
