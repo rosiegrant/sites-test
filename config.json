@@ -8,14 +8,14 @@
 	"templateVersion": 8,
 	"requireArtifactBuild": false,
 	"features": [
-		{
-			"name": "Product Page",
-			"streamLabel": "account-3434922/products",
-			"goTemplateEntityPageSet": {
-				"template": "product.source",
-				"urlTemplate": "product.url"
-			}
-		}
+		// {
+		// 	"name": "Product Page",
+		// 	"streamLabel": "account-3434922/products",
+		// 	"goTemplateEntityPageSet": {
+		// 		"template": "product.source",
+		// 		"urlTemplate": "product.url"
+		// 	}
+		// }
 			
 	],
 	"ci_config": {
